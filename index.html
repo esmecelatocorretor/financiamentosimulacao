@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Financiamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label, input, select {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastre-se abaixo e Solicite uma Simulação de Financiamento:</h1>
+    <form name="financeiro" method="post" data-netlify="true">
+        <label for="firstName">Primeiro Nome*</label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label for="lastName">Sobrenome*</label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="whatsapp">DDD + WhatsApp*</label>
+        <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{12}" required><br>
+
+        <label for="estadoCivil">Estado Civil*</label>
+        <select id="estadoCivil" name="estadoCivil" required>
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            <option value="uniaoEstavel">União Estável</option>
+            <option value="outros">Outros</option>
+        </select><br>
+
+        <label for="rendaFamiliar">Renda Mensal Bruta Familiar*</label>
+        <select id="rendaFamiliar" name="rendaFamiliar" required>
+            <option value="ate2000">Até R$ 2.000,00</option>
+            <option value="2001a3000">De R$ 2.000,01 a R$ 3.000,00</option>
+            <option value="3001a5000">De R$ 3.000,01 a R$ 5.000,00</option>
+            <option value="5001a7000">De R$ 5.000,01 a R$ 7.000,00</option>
+            <option value="7001a10000">De R$ 7.000,01 a R$ 10.000,00</option>
+            <option value="acima10000">Acima de R$ 10.000,00</option>
+        </select><br>
+
+        <label for="tipoRenda">Tipo de Renda*</label>
+        <select id="tipoRenda" name="tipoRenda" required>
+            <option value="folhaPagamento">Folha de Pagamento</option>
+            <option value="autonomo">Autônomo</option>
+            <option value="proLabore">Pró-Labore</option>
+            <option value="outros">Outros</option>
+        </select><br>
+
+        <label for="fgts">Saldo de FGTS*</label>
+        <select id="fgts" name="fgts" required>
+            <option value="ate2000">Até R$ 2.000,00</option>
+            <option value="2001a5000">De R$ 2.000,01 a R$ 5.000,00</option>
+            <option value="5001a10000">De R$ 5.000,01 a R$ 10.000,00</option>
+            <option value="10001a20000">De R$ 10.000,01 a R$ 20.000,00</option>
+            <option value="acima20000">Acima de R$ 20.000,00</option>
+        </select><br>
+
+        <label for="verification">4 + 1 = ?*</label>
+        <input type="text" id="verification" name="verification" required><br>
+
+        <input type="checkbox" id="comunicacoes" name="comunicacoes">
+        <label for="comunicacoes">Eu concordo em receber comunicações.</label><br>
+
+        <input type="submit" value="Quero Saber Mais">
+    </form>
+    <p>Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.</p>
+</body>
+</html>
